@@ -19,7 +19,7 @@ class CreateRolesTable extends Migration
             $table->string('role_desc', 50);
             $table->integer('created_by');
             $table->dateTime('created_on');
-            $table->boolean('role status',1);
+            $table->boolean('role_status',1);
             // $table->timestamps();
         });
     }
