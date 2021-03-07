@@ -15,7 +15,6 @@ class RoleSeeder extends Seeder
     public function run()
     {
         $roles = ['superadmin', 'admin', 'user'];
-        $i=0;
         foreach($roles as $role){
             DB::table('roles')->insert([
                 'role_title' => $role,
@@ -24,12 +23,6 @@ class RoleSeeder extends Seeder
                 'created_on' => date('Y-m-d h:i:s'),
                 'role_status' => 1
             ]);
-        $i++;
         }
-
-
-
-
-
     }
 }

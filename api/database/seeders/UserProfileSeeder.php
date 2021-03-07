@@ -14,15 +14,13 @@ class UserProfileSeeder extends Seeder
      */
     public function run()
     {
-        $userData = DB::table('users')->where('user_id', 1)->first();
-
         DB::table('user_profiles')->insert([
             'user_gender' => 'M',
-            'user_dob'=> '',
+            'user_dob'=> date('1987-05-22 h:i:s'),
             'user_ssn' => '',
             'user_drivers_licence' => '',
-            'user_id' => $userData->user_id,
-            'created_by' => '',
+            'user_id' =>1,
+            'created_by' => 1,
             'created_on' =>  date('Y-m-d h:i:s'),
             'user_status' => 1,
         ]);
